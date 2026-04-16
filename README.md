@@ -1,6 +1,14 @@
 # E-commerce DB Design
 
-## 1. DDL
+## 1. ERD
+<img src="Ecommerce%20DB%20Design.png" alt="Ecommerce DB Design">
+
+## 2. Relationships
+- One-to-Many: between Category and Products
+- One-to-Many: between Customers and Orders
+- Many-to-Many: between Products and Orders via Order_Details
+
+## 3. DDL
 
 ```
 CREATE TABLE CATEGORY (
@@ -49,11 +57,3 @@ CONSTRAINT ORDER_DETAILS_ORDER_FK FOREIGN KEY(ORDER_ID) REFERENCES ORDERS(ORDER_
 CONSTRAINT ORDER_DETAILS_PRODUCT_FK FOREIGN KEY(PRODUCT_ID) REFERENCES PRODUCTS(PRODUCT_ID)
 );
 ```
-
-## 2. ERD
-<img src="Ecommerce%20DB%20Design.png" alt="Ecommerce DB Design">
-
-## 3. Relationships
-- One-to-Many: between Category and Products
-- One-to-Many: between Customers and Orders
-- Many-to-Many: between Products and Orders via Order_Details
