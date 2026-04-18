@@ -124,3 +124,7 @@ HAVING SUM(o.TOTAL_AMOUNT) >= 500
 ORDER BY o.ORDER_DATE;
 ```
 
+## 5. apply a denormalization mechanism on customer and order entities
+
+- Add total spent amount, and number of orders columns in customers table 
+- Add customer name column in orders table
